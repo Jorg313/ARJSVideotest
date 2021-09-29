@@ -6,30 +6,6 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 
-  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-  <script>
-AFRAME.registerComponent('vidhandler', {
-  // ...
-  init: function () {
-    // Set up initial state and variables.
-var vid =  document.querySelector("#judas");	
-	const playbtn = document.querySelector("#Play")
-   	const stopbtn = document.querySelector("#Stop")
-  },
-  tick:function(){
-    
-if(this.el.object3D.visible == true){
-  if(!this.toggle){
-     this.toggle = true;
-     this.vid.play();
-    }
-  }else{
-  this.toggle = false;
-    this.vid.pause();
-    }
-  }
-});
-  </script>
 
 </head>
 
@@ -40,7 +16,7 @@ if(this.el.object3D.visible == true){
   </div>
   <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180' >
     <a-assets>
-      <video id="vid" src="Judastest.mp4"  loop="true" crossorigin>
+      <video id="vid" src="Transparenz.mov"  loop="true" crossorigin>
     </a-assets>
    
     <a-marker id="memarker" preset="hiro" vidhandler>
